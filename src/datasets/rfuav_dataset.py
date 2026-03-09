@@ -35,7 +35,7 @@ class RFUAVDataset(Dataset):
     and normalizes to match our model input format (1, H, W).
     """
 
-    def __init__(self, root_dir, target_size=(257, 512),
+    def __init__(self, root_dir, target_size=(257, 511),
                  label_mode="binary", indices=None):
         """
         Args:
