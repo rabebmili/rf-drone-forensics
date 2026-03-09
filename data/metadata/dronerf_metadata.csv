@@ -1,0 +1,85 @@
+file_path,label_binary,label_class_name,label_multiclass,activity_code,sample_id,file_stem,dataset
+data\raw\DroneRF\AR drone\10100H_0.csv,1,AR drone,1,10100H,0,10100H_0,DroneRF
+data\raw\DroneRF\AR drone\10100H_1.csv,1,AR drone,1,10100H,1,10100H_1,DroneRF
+data\raw\DroneRF\AR drone\10100H_10.csv,1,AR drone,1,10100H,10,10100H_10,DroneRF
+data\raw\DroneRF\AR drone\10100H_11.csv,1,AR drone,1,10100H,11,10100H_11,DroneRF
+data\raw\DroneRF\AR drone\10100H_12.csv,1,AR drone,1,10100H,12,10100H_12,DroneRF
+data\raw\DroneRF\AR drone\10100H_13.csv,1,AR drone,1,10100H,13,10100H_13,DroneRF
+data\raw\DroneRF\AR drone\10100H_14.csv,1,AR drone,1,10100H,14,10100H_14,DroneRF
+data\raw\DroneRF\AR drone\10100H_15.csv,1,AR drone,1,10100H,15,10100H_15,DroneRF
+data\raw\DroneRF\AR drone\10100H_16.csv,1,AR drone,1,10100H,16,10100H_16,DroneRF
+data\raw\DroneRF\AR drone\10100H_17.csv,1,AR drone,1,10100H,17,10100H_17,DroneRF
+data\raw\DroneRF\AR drone\10100H_18.csv,1,AR drone,1,10100H,18,10100H_18,DroneRF
+data\raw\DroneRF\AR drone\10100H_19.csv,1,AR drone,1,10100H,19,10100H_19,DroneRF
+data\raw\DroneRF\AR drone\10100H_2.csv,1,AR drone,1,10100H,2,10100H_2,DroneRF
+data\raw\DroneRF\AR drone\10100H_20.csv,1,AR drone,1,10100H,20,10100H_20,DroneRF
+data\raw\DroneRF\AR drone\10100H_3.csv,1,AR drone,1,10100H,3,10100H_3,DroneRF
+data\raw\DroneRF\AR drone\10100H_4.csv,1,AR drone,1,10100H,4,10100H_4,DroneRF
+data\raw\DroneRF\AR drone\10100H_5.csv,1,AR drone,1,10100H,5,10100H_5,DroneRF
+data\raw\DroneRF\AR drone\10100H_6.csv,1,AR drone,1,10100H,6,10100H_6,DroneRF
+data\raw\DroneRF\AR drone\10100H_7.csv,1,AR drone,1,10100H,7,10100H_7,DroneRF
+data\raw\DroneRF\AR drone\10100H_8.csv,1,AR drone,1,10100H,8,10100H_8,DroneRF
+data\raw\DroneRF\AR drone\10100H_9.csv,1,AR drone,1,10100H,9,10100H_9,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_0.csv,0,Background RF activites,0,00000H,0,00000H_0,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_1.csv,0,Background RF activites,0,00000H,1,00000H_1,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_10.csv,0,Background RF activites,0,00000H,10,00000H_10,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_11.csv,0,Background RF activites,0,00000H,11,00000H_11,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_12.csv,0,Background RF activites,0,00000H,12,00000H_12,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_13.csv,0,Background RF activites,0,00000H,13,00000H_13,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_14.csv,0,Background RF activites,0,00000H,14,00000H_14,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_15.csv,0,Background RF activites,0,00000H,15,00000H_15,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_16.csv,0,Background RF activites,0,00000H,16,00000H_16,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_17.csv,0,Background RF activites,0,00000H,17,00000H_17,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_18.csv,0,Background RF activites,0,00000H,18,00000H_18,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_19.csv,0,Background RF activites,0,00000H,19,00000H_19,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_2.csv,0,Background RF activites,0,00000H,2,00000H_2,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_20.csv,0,Background RF activites,0,00000H,20,00000H_20,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_3.csv,0,Background RF activites,0,00000H,3,00000H_3,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_4.csv,0,Background RF activites,0,00000H,4,00000H_4,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_5.csv,0,Background RF activites,0,00000H,5,00000H_5,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_6.csv,0,Background RF activites,0,00000H,6,00000H_6,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_7.csv,0,Background RF activites,0,00000H,7,00000H_7,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_8.csv,0,Background RF activites,0,00000H,8,00000H_8,DroneRF
+data\raw\DroneRF\Background RF activites\00000H_9.csv,0,Background RF activites,0,00000H,9,00000H_9,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_0.csv,1,Bepop drone,2,10001H,0,10001H_0,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_1.csv,1,Bepop drone,2,10001H,1,10001H_1,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_10.csv,1,Bepop drone,2,10001H,10,10001H_10,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_11.csv,1,Bepop drone,2,10001H,11,10001H_11,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_12.csv,1,Bepop drone,2,10001H,12,10001H_12,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_13.csv,1,Bepop drone,2,10001H,13,10001H_13,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_14.csv,1,Bepop drone,2,10001H,14,10001H_14,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_15.csv,1,Bepop drone,2,10001H,15,10001H_15,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_16.csv,1,Bepop drone,2,10001H,16,10001H_16,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_17.csv,1,Bepop drone,2,10001H,17,10001H_17,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_18.csv,1,Bepop drone,2,10001H,18,10001H_18,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_19.csv,1,Bepop drone,2,10001H,19,10001H_19,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_2.csv,1,Bepop drone,2,10001H,2,10001H_2,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_20.csv,1,Bepop drone,2,10001H,20,10001H_20,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_3.csv,1,Bepop drone,2,10001H,3,10001H_3,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_4.csv,1,Bepop drone,2,10001H,4,10001H_4,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_5.csv,1,Bepop drone,2,10001H,5,10001H_5,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_6.csv,1,Bepop drone,2,10001H,6,10001H_6,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_7.csv,1,Bepop drone,2,10001H,7,10001H_7,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_8.csv,1,Bepop drone,2,10001H,8,10001H_8,DroneRF
+data\raw\DroneRF\Bepop drone\10001H_9.csv,1,Bepop drone,2,10001H,9,10001H_9,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_0.csv,1,Phantom drone,3,11000H,0,11000H_0,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_1.csv,1,Phantom drone,3,11000H,1,11000H_1,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_10.csv,1,Phantom drone,3,11000H,10,11000H_10,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_11.csv,1,Phantom drone,3,11000H,11,11000H_11,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_12.csv,1,Phantom drone,3,11000H,12,11000H_12,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_13.csv,1,Phantom drone,3,11000H,13,11000H_13,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_14.csv,1,Phantom drone,3,11000H,14,11000H_14,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_15.csv,1,Phantom drone,3,11000H,15,11000H_15,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_16.csv,1,Phantom drone,3,11000H,16,11000H_16,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_17.csv,1,Phantom drone,3,11000H,17,11000H_17,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_18.csv,1,Phantom drone,3,11000H,18,11000H_18,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_19.csv,1,Phantom drone,3,11000H,19,11000H_19,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_2.csv,1,Phantom drone,3,11000H,2,11000H_2,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_20.csv,1,Phantom drone,3,11000H,20,11000H_20,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_3.csv,1,Phantom drone,3,11000H,3,11000H_3,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_4.csv,1,Phantom drone,3,11000H,4,11000H_4,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_5.csv,1,Phantom drone,3,11000H,5,11000H_5,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_6.csv,1,Phantom drone,3,11000H,6,11000H_6,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_7.csv,1,Phantom drone,3,11000H,7,11000H_7,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_8.csv,1,Phantom drone,3,11000H,8,11000H_8,DroneRF
+data\raw\DroneRF\Phantom drone\11000H_9.csv,1,Phantom drone,3,11000H,9,11000H_9,DroneRF
