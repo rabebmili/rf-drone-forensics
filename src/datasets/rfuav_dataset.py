@@ -84,27 +84,25 @@ class RFUAVDataset(Dataset):
 
         print(f"RFUAV: {len(self.samples)} samples, {len(self.classes)} classes")
 
+        # Preload all images into RAM for fast training
+        print(f"  Preloading {len(self.samples)} images into memory...")
+        self._cache = []
+        for img_path, label in self.samples:
+            img = Image.open(img_path).convert("L")
+            if self.target_size is not None:
+                img = img.resize((self.target_size[1], self.target_size[0]), Image.BILINEAR)
+            arr = np.array(img, dtype=np.float32) / 255.0
+            arr = (arr - arr.mean()) / (arr.std() + 1e-10)
+            x = torch.tensor(arr, dtype=torch.float32).unsqueeze(0)  # [1, H, W]
+            y = torch.tensor(label, dtype=torch.long)
+            self._cache.append((x, y))
+        print(f"  Preloading done.")
+
     def __len__(self):
         return len(self.samples)
 
     def __getitem__(self, idx):
-        img_path, label = self.samples[idx]
-
-        # Load image and convert to grayscale
-        img = Image.open(img_path).convert("L")
-
-        # Resize to match our spectrogram dimensions
-        if self.target_size is not None:
-            img = img.resize((self.target_size[1], self.target_size[0]), Image.BILINEAR)
-
-        # Convert to tensor and normalize (zero-mean, unit-variance)
-        arr = np.array(img, dtype=np.float32) / 255.0
-        arr = (arr - arr.mean()) / (arr.std() + 1e-10)
-
-        x = torch.tensor(arr, dtype=torch.float32).unsqueeze(0)  # [1, H, W]
-        y = torch.tensor(label, dtype=torch.long)
-
-        return x, y
+        return self._cache[idx]
 
     def get_class_names(self):
         return self.classes.copy()

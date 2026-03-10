@@ -238,11 +238,15 @@ def main():
     print(f"\n{'='*60}")
     print(f"  CROSS-DATASET SUMMARY — {args.model}")
     print(f"{'='*60}")
-    print(f"  {'Experiment':<30} {'Same-DS Acc':>12} {'Cross-DS Acc':>12} {'Gap':>8}")
+    print(f"  {'Experiment':<30} {'Metric':>20} {'Value':>10}")
     print(f"  {'-'*62}")
     for exp_name, r in all_results.items():
-        gap = r["same_dataset_acc"] - r["cross_dataset_acc"]
-        print(f"  {exp_name:<30} {r['same_dataset_acc']:>12.4f} {r['cross_dataset_acc']:>12.4f} {gap:>8.4f}")
+        for key, val in r.items():
+            if isinstance(val, float):
+                print(f"  {exp_name:<30} {key:>20} {val:>10.4f}")
+            else:
+                print(f"  {exp_name:<30} {key:>20} {val:>10}")
+        print()
 
     # Save results
     with open(output_dir / f"cross_dataset_{args.model}.json", "w") as f:

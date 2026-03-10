@@ -49,21 +49,24 @@ def collect_predictions(model, loader, device, return_probs=True):
 
 def compute_classification_metrics(y_true, y_pred, y_prob=None, class_names=None):
     """Compute comprehensive classification metrics."""
-    num_classes = len(np.unique(y_true))
+    # Use all labels seen in both y_true and y_pred
+    all_labels = sorted(set(np.unique(y_true)) | set(np.unique(y_pred)))
+    num_classes = len(all_labels)
     if class_names is None:
         class_names = CLASS_NAMES_BINARY if num_classes <= 2 else CLASS_NAMES_MULTI
 
     results = {
         "accuracy": accuracy_score(y_true, y_pred),
         "balanced_accuracy": balanced_accuracy_score(y_true, y_pred),
-        "macro_f1": f1_score(y_true, y_pred, average="macro"),
-        "weighted_f1": f1_score(y_true, y_pred, average="weighted"),
-        "macro_precision": precision_score(y_true, y_pred, average="macro", zero_division=0),
-        "macro_recall": recall_score(y_true, y_pred, average="macro", zero_division=0),
+        "macro_f1": f1_score(y_true, y_pred, average="macro", labels=all_labels, zero_division=0),
+        "weighted_f1": f1_score(y_true, y_pred, average="weighted", labels=all_labels, zero_division=0),
+        "macro_precision": precision_score(y_true, y_pred, average="macro", labels=all_labels, zero_division=0),
+        "macro_recall": recall_score(y_true, y_pred, average="macro", labels=all_labels, zero_division=0),
         "cohen_kappa": cohen_kappa_score(y_true, y_pred),
         "mcc": matthews_corrcoef(y_true, y_pred),
         "classification_report": classification_report(
-            y_true, y_pred, target_names=class_names[:num_classes], zero_division=0
+            y_true, y_pred, labels=all_labels,
+            target_names=class_names[:num_classes], zero_division=0
         ),
     }
 

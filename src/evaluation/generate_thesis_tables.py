@@ -201,32 +201,63 @@ def main():
     # =========================================
     # Generate combined comparison bar chart
     # =========================================
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    plt.rcParams.update({
+        "font.size": 11,
+        "axes.titlesize": 13,
+        "axes.titleweight": "bold",
+    })
 
-    # Binary comparison
-    b_names = [m["name"] for m in binary_models]
-    b_f1s = [m["macro_f1"] if isinstance(m["macro_f1"], float) else 0 for m in binary_models]
-    colors_b = ["#2196F3", "#4CAF50", "#FF9800", "#9C27B0", "#F44336"]
-    axes[0].barh(b_names, b_f1s, color=colors_b[:len(b_names)])
-    axes[0].set_xlim(0.95, 1.005)
-    axes[0].set_xlabel("Macro F1")
-    axes[0].set_title("Binary Detection — Macro F1")
-    for i, v in enumerate(b_f1s):
-        axes[0].text(v + 0.001, i, f"{v:.4f}", va="center", fontsize=9)
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
-    # Multiclass comparison
-    m_names = [f"{m['name']} ({m['version']})" for m in multi_models]
-    m_f1s = [m["macro_f1"] if isinstance(m["macro_f1"], float) else 0 for m in multi_models]
-    colors_m = ["#2196F3", "#4CAF50", "#FF9800", "#9C27B0", "#F44336", "#795548", "#607D8B"]
-    axes[1].barh(m_names, m_f1s, color=colors_m[:len(m_names)])
-    axes[1].set_xlim(0.5, 1.0)
-    axes[1].set_xlabel("Macro F1")
-    axes[1].set_title("Multi-class Attribution — Macro F1")
-    for i, v in enumerate(m_f1s):
-        axes[1].text(v + 0.005, i, f"{v:.4f}", va="center", fontsize=9)
+    # --- Binary comparison ---
+    # Sort by F1 descending (top bar = best)
+    b_data = sorted(
+        [(m["name"], m["macro_f1"] if isinstance(m["macro_f1"], float) else 0) for m in binary_models],
+        key=lambda x: x[1],
+    )
+    b_names, b_f1s = zip(*b_data)
+    colors_b = ["#78909C", "#AB47BC", "#FF7043", "#66BB6A", "#42A5F5"]
+    bars = axes[0].barh(b_names, b_f1s, color=colors_b[:len(b_names)], height=0.55, edgecolor="white")
+    min_val = min(b_f1s) - 0.03
+    axes[0].set_xlim(min_val, 1.0)
+    axes[0].set_xlabel("Macro F1 Score")
+    axes[0].set_title("Binary Detection")
+    axes[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:.2f}"))
+    for bar, v in zip(bars, b_f1s):
+        axes[0].text(v - 0.002, bar.get_y() + bar.get_height() / 2,
+                     f" {v:.3f}", va="center", ha="right", fontsize=10,
+                     fontweight="bold", color="white")
+    axes[0].spines["top"].set_visible(False)
+    axes[0].spines["right"].set_visible(False)
+    axes[0].tick_params(axis="y", length=0)
 
+    # --- Multiclass comparison ---
+    m_data = sorted(
+        [(f"{m['name']} ({m['version']})",
+          m["macro_f1"] if isinstance(m["macro_f1"], float) else 0)
+         for m in multi_models],
+        key=lambda x: x[1],
+    )
+    m_names, m_f1s = zip(*m_data)
+    n = len(m_names)
+    cmap = plt.cm.viridis(np.linspace(0.25, 0.85, n))
+    bars = axes[1].barh(m_names, m_f1s, color=cmap, height=0.55, edgecolor="white")
+    min_val_m = min(m_f1s) - 0.03
+    axes[1].set_xlim(min_val_m, 1.0)
+    axes[1].set_xlabel("Macro F1 Score")
+    axes[1].set_title("Multi-class Attribution")
+    axes[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:.2f}"))
+    for bar, v in zip(bars, m_f1s):
+        axes[1].text(v - 0.002, bar.get_y() + bar.get_height() / 2,
+                     f" {v:.3f}", va="center", ha="right", fontsize=10,
+                     fontweight="bold", color="white")
+    axes[1].spines["top"].set_visible(False)
+    axes[1].spines["right"].set_visible(False)
+    axes[1].tick_params(axis="y", length=0)
+
+    fig.suptitle("Model Comparison — Macro F1 Scores", fontsize=15, fontweight="bold", y=1.02)
     plt.tight_layout()
-    plt.savefig(output_dir / "model_comparison_bar.png", dpi=150, bbox_inches="tight")
+    plt.savefig(output_dir / "model_comparison_bar.png", dpi=200, bbox_inches="tight")
     plt.close()
     print(f"\nComparison chart saved: {output_dir / 'model_comparison_bar.png'}")
 
