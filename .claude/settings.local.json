@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(source .venv/Scripts/activate && python -m src.evaluation.plot_pipeline)"
     ]
   }
 }
