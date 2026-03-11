@@ -45,7 +45,7 @@ def draw_phase(ax, y, label, color_main, color_dark, color_light, color_text,
 
     # Phase title (top area of box)
     ax.text(PHASE_X + PHASE_W / 2, y + PHASE_H - 0.22, label,
-            ha="center", va="center", fontsize=13, fontweight="bold",
+            ha="center", va="center", fontsize=16, fontweight="bold",
             color="white", zorder=4)
 
     # ── Auto-layout sub-boxes ──
@@ -70,7 +70,7 @@ def draw_phase(ax, y, label, color_main, color_dark, color_light, color_text,
         )
         ax.add_patch(sb)
         ax.text(sx + sw / 2, sy + SUB_H / 2, txt,
-                ha="center", va="center", fontsize=8.5,
+                ha="center", va="center", fontsize=12.5,
                 color=color_text, fontweight="medium", zorder=4)
 
         # Arrow between sub-boxes
