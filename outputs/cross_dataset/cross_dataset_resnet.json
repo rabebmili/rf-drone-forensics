@@ -1,0 +1,21 @@
+{
+  "dronerf_to_rfuav": {
+    "same_dataset_acc": 0.9431567328918322,
+    "cross_dataset_acc": 1.0,
+    "same_dataset_f1": 0.9177559550433064,
+    "cross_dataset_f1": 1.0
+  },
+  "rfuav_to_dronerf": {
+    "same_dataset_acc": 1.0,
+    "cross_dataset_acc": 0.75,
+    "same_dataset_f1": 1.0,
+    "cross_dataset_f1": 0.42857142857142855
+  },
+  "combined": {
+    "dronerf_acc": 0.9613686534216336,
+    "dronerf_f1": 0.9455801692832577,
+    "rfuav_acc": 1.0,
+    "rfuav_f1": 1.0,
+    "train_size": 12999
+  }
+}
