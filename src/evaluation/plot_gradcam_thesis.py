@@ -67,3 +67,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+"""
+  On voit que le modèle se concentre sur des bandes de fréquence spécifiques dans la partie basse du spectrogramme,
+  correspondant aux signatures RF caractéristiques du drone AR. Les zones rouges indiquent les régions à forte
+  contribution pour la décision de classification.
+
+  Exemple de carte d'activation Grad-CAM appliquée à un spectrogramme RF (modèle RFResNet, classification
+  multi-classe)
+"""
